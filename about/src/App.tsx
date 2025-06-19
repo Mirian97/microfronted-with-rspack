@@ -1,10 +1,10 @@
-import Footer from "home/Footer";
-import Header from "home/Header";
+import { Footer } from "home/Footer";
+import { Header } from "home/Header";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 
 const App = () => (
-  <div className="text-3xl mx-auto max-w-6xl">
+  <div className="mx-auto max-w-6xl">
     <Header />
     <div className="text-center py-6">
       <img
