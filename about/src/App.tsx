@@ -6,7 +6,7 @@ import { Profile } from "./components/profile";
 import "./index.css";
 
 const App = () => (
-  <div className="mx-auto max-w-6xl flex flex-col min-h-dvh bg-zinc-100">
+  <div className="mx-auto w-full flex flex-col min-h-dvh bg-zinc-100">
     <Header />
     <Profile />
     <Footer />

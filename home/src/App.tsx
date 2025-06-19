@@ -4,7 +4,7 @@ import { Header } from "./components/header";
 import "./index.css";
 
 const App = () => (
-  <div className="text-3xl mx-auto max-w-6xl min-h-dvh flex flex-col">
+  <div className="text-3xl mx-auto min-h-dvh flex flex-col">
     <Header />
     <div className="my-10 mx-4">Home</div>
     <Footer />
