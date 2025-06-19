@@ -1,8 +1,7 @@
-import * as path from "node:path";
-import { defineConfig } from "@rspack/cli";
+import { ModuleFederationPlugin } from "@module-federation/enhanced/rspack";
 import { rspack } from "@rspack/core";
 import * as RefreshPlugin from "@rspack/plugin-react-refresh";
-import { ModuleFederationPlugin } from "@module-federation/enhanced/rspack";
+import * as path from "node:path";
 import { withZephyr } from "zephyr-rspack-plugin";
 
 import { mfConfig } from "./module-federation.config";
@@ -25,6 +24,12 @@ export default withZephyr()({
     port: 3000,
     historyApiFallback: true,
     watchFiles: [path.resolve(__dirname, "src")],
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
+      "Access-Control-Allow-Headers":
+        "X-Requested-With, content-type, Authorization",
+    },
   },
   output: {
     // You need to set a unique value that is not equal to other applications

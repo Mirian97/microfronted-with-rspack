@@ -23,6 +23,12 @@ export default withZephyr()({
     port: 3001,
     historyApiFallback: true,
     watchFiles: [path.resolve(__dirname, "src")],
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
+      "Access-Control-Allow-Headers":
+        "X-Requested-With, content-type, Authorization",
+    },
   },
   output: {
     // You need to set a unique value that is not equal to other applications
@@ -80,13 +86,11 @@ export default withZephyr()({
     isDev ? new RefreshPlugin() : null,
   ].filter(Boolean),
   optimization: {
-    minimizer: isDev
-      ? []
-      : [
-          new rspack.SwcJsMinimizerRspackPlugin(),
-          new rspack.LightningCssMinimizerRspackPlugin({
-            minimizerOptions: { targets },
-          }),
-        ],
+    minimizer: [
+      new rspack.SwcJsMinimizerRspackPlugin(),
+      new rspack.LightningCssMinimizerRspackPlugin({
+        minimizerOptions: { targets },
+      }),
+    ],
   },
 });
