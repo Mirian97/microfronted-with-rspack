@@ -10,6 +10,7 @@ This project demonstrates a **microfrontend architecture** using **Module Federa
 
 <div align="center">
    <img src="./assets/about.png" alt="About App Preview" width="400" />
+   <p>Preview from About app</p>
 </div>
 
 ## Tech Stack 🛠️
