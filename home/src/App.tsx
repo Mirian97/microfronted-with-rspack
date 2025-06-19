@@ -6,7 +6,7 @@ import "./index.css";
 const App = () => (
   <div className="text-3xl mx-auto max-w-6xl min-h-dvh flex flex-col">
     <Header />
-    <div className="my-10 mx-4">Home page</div>
+    <div className="my-10 mx-4">Home</div>
     <Footer />
   </div>
 );
