@@ -3,6 +3,6 @@ export const mfConfig = {
   shared: ["react", "react-dom"],
   exposes: {},
   remotes: {
-    home: "home@http://localhost:3001/mf-manifest.json",
+    home: "home@http://localhost:3000/mf-manifest.json",
   },
 };
